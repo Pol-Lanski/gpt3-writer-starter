@@ -6,7 +6,7 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
-const basePromptPrefix = "";
+const basePromptPrefix = "Answer this question about Dappnode. Please don't answer this question if the topic is NOT about Dappnode and instead tell me that the question doesn't seem to be related to Dappnode. ";
 const generateAction = async (req, res) => {
   // Run first prompt
   console.log(`API: ${basePromptPrefix}${req.body.userInput}`)
